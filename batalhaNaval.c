@@ -7,21 +7,23 @@
 int main() {
     // Nível Novato - Posicionamento dos Navios
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
-    int tabuleiro[11][10];
+    int tabuleiro[10][10];
 
     // declarando variaveis do eixo X e Y
     int i = 0;
     int j = 0;
-
+    int marcacaoLinha = 1;
     // loop para acrescentar valor de um as variaveis de eixo X e Y
     printf("A B C D E F G H I J\n");
     while (j < 10) {
         
         i = 0; //para sempre começar com a linha zerada
-        while (i < 11) {
+        while (i < 10) {
+            printf("%d-", marcacaoLinha);
             tabuleiro[i][0] = i;
             tabuleiro[i][j] = 0;//transforma todos os valores em 0
             i++;
+            marcacaoLinha++;
         }
         j++;
     }
